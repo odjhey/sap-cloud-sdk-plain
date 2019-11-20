@@ -8,3 +8,5 @@ dist
 /.vscode
 **credentials.json
 /s4hana_pipeline
+
+deployment/
