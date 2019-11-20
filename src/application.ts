@@ -1,6 +1,7 @@
 import express from "express";
 import { helloWorld } from "./hello-world-route";
 import { indexRoute } from "./index-route";
+import { businessPartners } from "./business-partner-route";
 
 class App {
   public app: express.Application;
@@ -21,6 +22,7 @@ class App {
 
     router.get("/", indexRoute);
     router.get("/hello", helloWorld);
+    router.get("/business-partners", businessPartners);
     this.app.use("/", router);
   }
 }
