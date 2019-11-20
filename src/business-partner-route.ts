@@ -11,7 +11,7 @@ const getAllBusinessPartners = (): Promise<BusinessPartner[]> => {
   return BusinessPartner.requestBuilder()
     .getAll()
     .execute({
-      url: "http://localhost:3000"
+      destinationName: "MockServer"
     });
 };
 

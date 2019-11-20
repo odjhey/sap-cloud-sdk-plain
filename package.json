@@ -6,7 +6,7 @@
   "scripts": {
     "init": "npm i && node initialize.js",
     "test": "mocha -r ts-node/register test/**/*.spec.ts --exit",
-    "start:local": "npx ts-node src/",
+    "start:local": "npx ts-node -r dotenv/config src/",
     "watch:local": "nodemon -e ts -w ./src -x npm run serve-debug",
     "serve-debug": "node -r ts-node/register --inspect src/index.ts",
     "ci-build": "npx tsc",
@@ -27,6 +27,7 @@
     "@types/sinon-chai": "^3.2.2",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
+    "dotenv": "^8.2.0",
     "js-yaml": "^3.13.0",
     "mocha": "^5.2.0",
     "mocha-junit-reporter": "^1.18.0",
