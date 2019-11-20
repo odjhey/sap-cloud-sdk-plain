@@ -1,7 +1,18 @@
 import { Request, Response } from "express";
+import { BusinessPartner } from "@sap/cloud-sdk-vdm-business-partner-service";
 
-const businessPartners = (req: Request, res: Response) => {
-  res.status(200).send("we will implement this in a minute");
+const businessPartners = async (req: Request, res: Response) => {
+  getAllBusinessPartners()
+    .then(businessPartners => res.status(200).send(businessPartners))
+    .catch(e => res.status(500).send(e));
+};
+
+const getAllBusinessPartners = (): Promise<BusinessPartner[]> => {
+  return BusinessPartner.requestBuilder()
+    .getAll()
+    .execute({
+      url: "http://localhost:3000"
+    });
 };
 
 export { businessPartners };
