@@ -1,5 +1,5 @@
 {
-  "name": "cloud-sdk-starter-app",
+  "name": "sap-cloud-sdk-js",
   "version": "1.0.0",
   "description": "Starter project using the SAP Cloud SDK and Express.js",
   "main": "src/index.ts",
